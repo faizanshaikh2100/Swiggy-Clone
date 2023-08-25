@@ -4,7 +4,7 @@ import Image from "./Image";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 
-function MyCarousel({ title, dataArray, isImage }) {
+function MyCarousel({ title, dataArray, isImage, className }) {
   const imageParentDivRef = useRef(null);
 
   function scrollPrev() {
@@ -25,7 +25,7 @@ function MyCarousel({ title, dataArray, isImage }) {
   }
 
   return (
-    <div className="relative mt-6">
+    <div className={"relative mt-6 " + className}>
       <div className="flex items-center justify-between">
         <h2 className="font-bold text-2xl">{title}</h2>
         <div className="flex items-center gap-3">
